@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+body{
+    background-color: rgb(250, 250, 250);
+}
+
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo-name{
+    font-family: 'Poiret One', cursive;
+}
+
+li{
+    list-style: none;
+}
+
+.nav-menu {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 750ms;
+}
+  
+.nav-menu.active {
+    left: 0;
+    transition: 450ms;
+}
+  
+.nav-item{
+    @apply hidden md:flex font-light antialiased focus:outline-none text-xl text-gray-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-gray-800;
+}
+
+.nav-item-responsive{
+    @apply font-light my-2 antialiased focus:outline-none text-2xl text-gray-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-gray-800
+}
+
+.icon-button{
+    @apply focus:outline-none text-xl text-gray-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:text-gray-800;
+}
