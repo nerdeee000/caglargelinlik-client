@@ -1,26 +1,19 @@
+import { Down } from '../utils/Icons'
+
 export const NavbarData = [
   {
     title: 'Ana Sayfa',
-    path: '/'
+    path: '/',
+    icon: null
   },
   {
     title: 'Ürünlerimiz',
-    path: '/products'
-  },
-  {
-    title: 'Albüm',
-    path: '/album'
-  },
-  {
-    title: 'Blog',
-    path: '/blog'
+    path: '/products',
+    icon:  null,
   },
   {
     title: 'Nasıl Giderim?',
-    path: '/how-can-i-go-to'
-  },
-  {
-    title: 'Destek',
-    path: '/support'
+    path: '/how-can-i-go-to',
+    icon: null
   }
 ];

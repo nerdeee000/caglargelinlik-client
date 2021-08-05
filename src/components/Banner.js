@@ -1,36 +1,36 @@
 import React, { useState, useEffect, Fragment } from 'react'
 
 export default function Banner() {
-    const [campaigns, setCampaigns] = useState([
+    
+    const [campaigns] = useState([
         { 
             title: "Yeni Kampanya Dönemi Başladı!!!",
-            description: "Yeni ürünlerde kaçınılmaz fırsatlar.",
-            remaining_date: "Son 2 gün kaldı!"
+            description: "Yeni ürünlerde kaçınılmaz fırsatlar ",
         }
     ]);
 
     useEffect(() =>{
 
-        },[])
+    },[]);
+
     return (
         <div>
-            <div className="bg-gray-300 bg-opacity-25 flex flex-col items-center py-3 text-sm">
-                    <p className="antialiased font-light truncate">
+            <div className="bg-gray-300 bg-opacity-25 flex justify-center py-3 text-xs">
+                    <p className="antialiased text-gray-800 font-light">
                         {
                             campaigns.map((campaign,index)=>(
                                 <Fragment key={index}>
-                                    <span className="md:hidden">
+                                    <span className="uppercase tracking-widest md:hidden">
                                         {campaign.title}
                                     </span>
-                                    <span className="hidden md:inline">
-                                        {campaign.description}
+                                    <span className="uppercase tracking-widest hidden md:inline">
+                                        {campaign.description} &nbsp;
                                     </span>
-                                    <span className="hidden md:inline font-semibold uppercase text-red-500"> {campaign.remaining_date} </span>
                                 </Fragment>
                             ))
                         }
                     </p>
-                    <a className="underline font-semibold" href="/#"> Daha fazla bilgi edinin.</a>
+                    <span className="tracking-widest font-light text-black hover:underline"> DAHA FAZLA</span>
             </div>
         </div>
     )
